@@ -21,10 +21,6 @@
     }
   },
   "require": {
-    "be/be": "~2.7.0",
-    "be/app-shop": "dev-main",
-    "be/app-cms": "dev-master",
-    "be/app-monkey": "dev-main",
-    "be/app-etl": "dev-master"
+    "be/be": "~2.7.0"
   }
 }
