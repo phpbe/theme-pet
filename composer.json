@@ -1,0 +1,26 @@
+{
+  "name": "be/theme-pet",
+  "type": "library",
+  "description": "宠物商店",
+  "keywords": [
+    "宠物食品",
+    "宠物玩具",
+    "宠物商店"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "1024i team",
+      "email": "1024i@1024i.com",
+      "homepage": "https://www.1024i.com/team"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Be\\Theme\\Pet\\": "src/"
+    }
+  },
+  "require": {
+    "be/be": "~2.7.0"
+  }
+}

@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+
+::selection {
+    background-color: var(--major-color);
+    color: #fff;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Fredoka One';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/fredokaone.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+a {
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+a:active, a:hover {
+    outline: none;
+    text-decoration: none;
+}
+
+@keyframes ajaxLoading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes swingBanner {
+    17% {
+        transform: translateX(8px);
+    }
+
+    33% {
+        transform: translateX(-6px);
+    }
+
+    50% {
+        transform: translateX(4px);
+    }
+
+    66% {
+        transform: translateX(-2px);
+    }
+
+    83% {
+        transform: translateX(1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+#ajax-loader {
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
+    z-index: 1050;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 10px;
+    display: none;
+}
+
+#ajax-loader div {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 35px;
+    height: 35px;
+    border: 4px solid;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-animation: ajaxLoading 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+    -webkit-animation: ajaxLoading 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+    -o-animation: ajaxLoading 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+    animation: ajaxLoading 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+    border-color: var(--major-color) transparent transparent transparent;
+}
+
+#ajax-loader div:nth-child(1) {
+    -moz-animation-delay: -0.45s;
+    -webkit-animation-delay: -0.45s;
+    -o-animation-delay: -0.45s;
+    animation-delay: -0.45s
+}
+
+#ajax-loader div:nth-child(2) {
+    -moz-animation-delay: -0.3s;
+    -webkit-animation-delay: -0.3s;
+    -o-animation-delay: -0.3s;
+    animation-delay: -0.3s
+}
+
+#ajax-loader div:nth-child(3) {
+    -moz-animation-delay: -0.15s;
+    -webkit-animation-delay: -0.15s;
+    -o-animation-delay: -0.15s;
+    animation-delay: -0.15s
+}
+
+#overlay {
+    position: fixed;
+    background-color: rgba(35, 35, 35, .8);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+#goto-top {
+    display: none;
+    background-color: var(--major-color);
+    color: #fff;
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    z-index: 999;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#goto-top:hover {
+    background-color: var(--major-color3);
+}
+
+
+
+
+
+
+
+.js-open-layer body {
+    overflow-y: hidden;
+    height: 100%;
+}
+
+.js-open-layer #overlay {
+    display: block;
+}
+
+.js-open-layer {
+    overflow: hidden;
+}
+
+
+
+
+
+
+/* --------------------------------- validator --------------------------------- */
+
+form .be-input.error,
+form .be-select.error,
+form .be-textarea.error {
+    border-color: var(--color-red);
+    box-shadow: 0 0 0 1px var(--color-red);
+}
+
+form label.error {
+    color: var(--color-red);
+    margin-top: 5px;
+    display: inline-block;
+}
